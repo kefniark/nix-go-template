@@ -5,13 +5,13 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     flake-utils.url = "github:numtide/flake-utils";
+    gomod2nix = {
+      url = "github:nix-community/gomod2nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Use unstable channel for go 1.22
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    gomod2nix = {
-      url = "github:nix-community/gomod2nix";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
   };
 
   # Flake Output
