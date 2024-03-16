@@ -1,0 +1,22 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Generated Folders
+.direnv
+bin
+tmp
+logs
+result*
+
+# Temporary files
+*.test
+*.log
+*.out
+
+# Coverage
+coverage.xml
+coverage.html
