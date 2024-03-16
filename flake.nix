@@ -51,6 +51,7 @@
             gm2n.gomod2nix
 
             # Dev Tools: just, goimports, godoc, ...
+            # pkgs.go
             pkgs.gotools
             pkgs.golangci-lint
             pkgs.just
