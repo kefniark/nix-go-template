@@ -9,7 +9,7 @@
     # Use unstable channel for go 1.22
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     gomod2nix = {
-      url = github:nix-community/gomod2nix;
+      url = "github:nix-community/gomod2nix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
