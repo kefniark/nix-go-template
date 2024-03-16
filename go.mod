@@ -1,6 +1,6 @@
 module github.com/kefniark/nix-go-template
 
-go 1.21
+go 1.22
 
 require (
 	github.com/pterm/pterm v0.12.79
