@@ -39,6 +39,7 @@
           ldflags = [ "-s" "-w" "-X main.BuildVersion=${version}" ];
           modules = ./gomod2nix.toml;
           doCheck = false;
+          go = pkgs-unstable.go_1_22;
         };
 
         # Development shell
