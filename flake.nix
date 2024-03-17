@@ -6,7 +6,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     flake-utils.url = "github:numtide/flake-utils";
     gomod2nix = {
-      url = github:nix-community/gomod2nix;
+      url = "github:nix-community/gomod2nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -39,6 +39,7 @@
           ldflags = [ "-s" "-w" "-X main.BuildVersion=${version}" ];
           modules = ./gomod2nix.toml;
           doCheck = false;
+          go = pkgs-unstable.go_1_22;
         };
 
         # Development shell
@@ -46,12 +47,12 @@
           name = "nix-go-devshell-${system}";
           buildInputs = [
             # Go (from unstable channel)
-            # pkgs-unstable.go_1_22
+            pkgs-unstable.go_1_22
             pkgs-unstable.gocover-cobertura
             gm2n.gomod2nix
 
             # Dev Tools: just, goimports, godoc, ...
-            pkgs.go
+            # pkgs.go
             pkgs.gotools
             pkgs.golangci-lint
             pkgs.just
