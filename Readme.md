@@ -1,7 +1,6 @@
 # Nix Go Template
 
-Small experimentation to integrate a Go Application with nix flakes.
-To get reproducible cross-platform dev environments and builds.
+Small experimentation to integrate a Go Application with nix flakes, to get reproducible dev environments and builds.
 
 ## Goals
 
