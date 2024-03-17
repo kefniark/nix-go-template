@@ -1,15 +1,19 @@
 # Nix Go Template
 
-Small experimentation trying to package a Go Application and multiple CLI commands with nix flakes.
+Small experimentation trying to package a Go Application with nix flakes
 
 ## Goals
 
-- Be able to have a small understandable flake. Most of the one on the net are overly complex for my need.
-- Be able to use recent Go (from unstable) with stable dependencies.
-- Be able to build cross platform
-- Get a nice devShells experience
-  - [Just](https://github.com/casey/just) as a command runner
+- Be able to have a small understandable flake
+- Be able to use recent Go (from unstable) and keep stable dependencies for everything else
+- Get a nice dev experience
   - All tools installed automatically with right versions
+  - [Just](https://github.com/casey/just) as a command runner
+  - And some preconfigured alias to make our life easier
+- Get a simple build
+  - Reproducible with [gomod2nix](https://github.com/nix-community/gomod2nix)
+  - Work fine even with multiple CLI
+  - Cross platform
 
 ---
 
