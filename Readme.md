@@ -53,3 +53,5 @@ app2
 # our app is removed and we get a clean shell
 exit
 ```
+
+You can even test without even cloning the repo `nix shell github:kefniark/nix-go-template`
