@@ -21,14 +21,14 @@ With this template, you can develop your Go Application locally with a reproduci
 nix develop .
 ```
 
-No need to install anything manually (Go, linter, ... or worry about versions).
+No need to install anything manually, everything comes from nix (Go, formatter, linter, ...).
 
 ```sh
-# Run our app (alias for go run ...)
+# Run our app during development (alias for go run ...)
 dev-app1
 dev-app2
 
-# And dev tools based on just
+# Use dev tools based on just
 just fmt
 just lint
 just test
@@ -42,8 +42,10 @@ Nix can also be used as a package manager, to build & install our app
 ```sh
 nix shell .
 
-app1 # We can use our app like any installed tool
+# We can use our app like any installed tool
+app1
 app2
 
-exit # our app is removed and we get a clean shell
+# our app is removed and we get a clean shell
+exit
 ```
