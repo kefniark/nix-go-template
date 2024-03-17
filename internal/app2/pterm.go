@@ -19,5 +19,5 @@ func Run() {
 		time.Sleep(time.Second)
 	}
 
-	area.Stop()
+	_ = area.Stop()
 }

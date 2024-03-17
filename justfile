@@ -11,6 +11,7 @@ fmt:
     @echo "Formatting ..."
     goimports -w .
     gofmt -s -w .
+    nix fmt
 
 lint:
     @echo "Linting ..."
@@ -28,13 +29,7 @@ test:
     gocover-cobertura < coverage.out > coverage.xml
 
 
-# Run our application during development
-app1 +ARGS:
-    go run ./cmd/app1/app1.go {{ARGS}}
-
-app2 +ARGS:
-    go run ./cmd/app2/app2.go {{ARGS}}
-
+# Build static binaries during development
 build:
     @echo "Create local build in ./bin"
     go build -ldflags "-s -w -X main.BuildVersion=develop" -o bin/app1 cmd/app1/app1.go
